@@ -1,5 +1,4 @@
-const math = require("./math.js");
-const { add, minus, multi } = math;
+import { add, minus, multi } from './math';
 
 // function expect(result) {
 //   return {
