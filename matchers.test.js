@@ -28,7 +28,29 @@
 //   expect(a).toBeFalsy();
 // });
 
-test("not 匹配器", () => {
-  const a = 1;
-  expect(a).not.toBeFalsy();
+// test("not 匹配器", () => {
+//   const a = 1;
+//   expect(a).not.toBeFalsy();
+// });
+
+// 數字相關
+// test("toBeGreaterThan 匹配器", () => {
+//   const a = 10;
+//   expect(a).toBeGreaterThan(9);
+// });
+
+// test("toBeLessThan 匹配器", () => {
+//   const a = 10;
+//   expect(a).toBeLessThan(11);
+// });
+
+// test("toBeGreaterThanOrEqual 匹配器", () => {
+//   const a = 10;
+//   expect(a).toBeGreaterThanOrEqual(10);
+// });
+
+test("toBeCloseTo 匹配器", () => {
+  const firstNumber = 0.1;
+  const secondNumber = 0.2;
+  expect(firstNumber + secondNumber).toBeCloseTo(0.3);
 });
