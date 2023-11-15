@@ -49,8 +49,14 @@
 //   expect(a).toBeGreaterThanOrEqual(10);
 // });
 
-test("toBeCloseTo 匹配器", () => {
-  const firstNumber = 0.1;
-  const secondNumber = 0.2;
-  expect(firstNumber + secondNumber).toBeCloseTo(0.3);
+// test("toBeCloseTo 匹配器", () => {
+//   const firstNumber = 0.1;
+//   const secondNumber = 0.2;
+//   expect(firstNumber + secondNumber).toBeCloseTo(0.3);
+// });
+
+// String
+test("toMatch 匹配器", () => {
+  const str = "http://www.dell-lee.com";
+  expect(str).toMatch(/dell/);
 });
