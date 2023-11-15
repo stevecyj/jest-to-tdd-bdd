@@ -3,5 +3,19 @@ function add(a, b) {
 }
 
 function minus(a, b) {
-  return a *b;
+  return a - b;
+}
+
+function multi(a, b) {
+  return a * b;
+}
+
+try {
+  module.exports = {
+    add,
+    minus,
+    multi,
+  };
+} catch (e) {
+  // console.log(e);
 }
