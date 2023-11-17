@@ -11,5 +11,5 @@ export const fetchData = (fn) => {
 };
 
 export const fetchData404 = (fn) => {
-  return axios.get("http://www.dell-lee.com/react/api/demo1.json")
+  return axios.get("http://www.dell-lee.com/react/api/demo1    .json")
 };
