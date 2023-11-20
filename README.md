@@ -8,4 +8,6 @@
 * 改變函數的内部實現
 
 ## vscode extension
+
 * [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+  * Project name should not contain spaces
