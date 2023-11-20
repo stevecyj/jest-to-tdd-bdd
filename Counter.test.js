@@ -2,9 +2,13 @@ import Counter from "./Counter";
 
 let counter = null;
 beforeEach(() => {
-  console.log("BeforeAll");
+  console.log("BeforeEach");
   counter = new Counter();
 });
+
+afterEach(() => {
+  console.log("AfterEach");
+})
 
 afterAll(() => {
   console.log("AfterAll");
