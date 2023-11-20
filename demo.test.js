@@ -1,44 +1,39 @@
-import { runCallback, createObject, getData } from "./demo";
-import axios from "axios";
-jest.mock("axios");
+import { generateConfig, generateAnotherConfig } from "./demo";
 
-test.only("测试 runCallback", () => {
-  const func = jest.fn();
-  // func.mockReturnValue('jojo')
-  // func.mockImplementationOnce(() => {
-  //   console.log("mock callback");
-  //   return "jojo";
-  // });
-  // func.mockImplementationOnce(() => {
-  //   console.log("mock callback");
-  //   return "jojo";
-  // });
-  // func.mockImplementationOnce(() => {
-  //   return this;
-  // });
-  func.mockReturnThis();
-
-  runCallback(func);
-  runCallback(func);
-  runCallback(func);
-  // expect(func.mock.calls.length).toBe(3)
-  // expect(func.mock.calls[0]).toEqual(["abc"]);
-  expect(func).toBeCalledWith("abc");
-  // expect(func.mock.results[0].value).toBe("jojo");
-  // expect(func.mock.results[1].value).toBe("jojo2");
-  expect(func.mock.results[0].value).toBeUndefined();
-  // console.log(func.mock)
+test("测试 generateConfig 函数", () => {
+  expect(generateConfig()).toMatchInlineSnapshot(
+    {
+      time: expect.any(Date),
+    },
+    `
+    {
+      "domain": "localhost1",
+      "port": "8080",
+      "server": "http://localhost",
+      "time": Any<Date>,
+    }
+  `
+  );
 });
 
-test("测试 createObject", () => {
-  const func = jest.fn();
-  createObject(func);
-  console.log(func.mock);
-});
+// test("测试 generateAnotherConfig 函数", () => {
+//   expect(generateAnotherConfig()).toMatchSnapshot({
+//     time: expect.any(Date)
+//   });
+// })
 
-test("测试 getData", async () => {
-  axios.get.mockResolvedValue({ data: "hello" });
-  await getData().then((data) => {
-    expect(data).toBe("hello");
-  });
+test("测试 generateAnotherConfig 函数", () => {
+  expect(generateAnotherConfig()).toMatchInlineSnapshot(
+    {
+      time: expect.any(Date),
+    },
+    `
+    {
+      "domain": "localhost",
+      "port": "8080",
+      "server": "http://localhost",
+      "time": Any<Date>,
+    }
+  `
+  );
 });
