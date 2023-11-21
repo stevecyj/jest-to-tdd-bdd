@@ -11,3 +11,7 @@
 
 * [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
   * Project name should not contain spaces
+
+## snapshot
+
+* prettier < 3

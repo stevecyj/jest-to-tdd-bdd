@@ -7,7 +7,7 @@ test("测试 generateConfig 函数", () => {
     },
     `
     {
-      "domain": "localhost1",
+      "domain": "localhost",
       "port": "8080",
       "server": "http://localhost",
       "time": Any<Date>,
@@ -29,7 +29,7 @@ test("测试 generateAnotherConfig 函数", () => {
     },
     `
     {
-      "domain": "localhost",
+      "domain": "localhost2",
       "port": "8080",
       "server": "http://localhost",
       "time": Any<Date>,
