@@ -10,8 +10,13 @@
 ## vscode extension
 
 * [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
-  * Project name should not contain spaces
+  + Project name should not contain spaces
 
 ## snapshot
 
 * prettier < 3
+
+### mock 參考資料
+
+* [Jest Mock Functions](https://jestjs.io/docs/mock-function-api)
+* [The Jest Object](https://jestjs.io/docs/jest-object)
