@@ -1,17 +1,9 @@
-export const generateConfig = () => {
-  return {
-    server: "http://localhost",
-    port: "8080",
-    domain: "localhost",
-    time: new Date()
-  };
+import axios from "axios";
+
+export const fetchData = () => {
+  return axios.get("/").then((res) => res.data);
 };
 
-export const generateAnotherConfig = () => {
-  return {
-    server: "http://localhost",
-    port: "8080",
-    domain: "localhost2",
-    time: new Date()
-  };
+export const getNumber = () => {
+  return 123;
 };
