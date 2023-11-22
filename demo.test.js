@@ -1,11 +1,9 @@
-jest.mock("./util");
-import Util from "./util";
-import demoFunction from "./demo";
+import addDivToBody from "./demo";
+import $ from "jquery";
 
-test("test demoFunction", () => {
-  demoFunction();
-  expect(Util).toHaveBeenCalled();
-  expect(Util.mock.instances[0].a).toHaveBeenCalled();
-  expect(Util.mock.instances[0].b).toHaveBeenCalled();
-  console.log(Util.mock.instances[0]);
+test("addDivToBody", () => {
+  addDivToBody();
+  addDivToBody();
+  console.log($("body").find("div").length);
+  expect($("body").find("div").length).toBe(2);
 });
